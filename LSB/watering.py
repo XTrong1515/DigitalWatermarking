@@ -262,7 +262,7 @@ input_image_2 = 'stock-photo-159533631-1500x1000.jpg'
 output_image = 'watermarked.png'
 input_text = 'message_to_embed.txt'
 # input_watermark_image = 'miles.jpg'  # Ảnh cần nhúng vào
-input_watermark_image = '1000_F_539348176_ulGRbIS9rDObiEfl4MFrbwKNXQCe6SZC.jpg'
+input_watermark_image = 'miles.jpg'
 output_text = 'extracted_message.txt'
 
 # Tạo các đường dẫn đầy đủ
@@ -294,6 +294,8 @@ elif choice == '2':
     embed_image_data(input_image_path, input_watermark_img_path, output_image_path)
     # Sau khi nhúng xong, trích xuất dữ liệu đã nhúng (nếu có)
     extracted_img = extract_img(output_image_path, output_watermark_img_path)
+    # Gọi hàm đánh giá chất lượng ảnh
+    evaluate_quality(input_image_path, output_image_path)
     if extracted_img:
         print(f"Ảnh trích xuất thành công và lưu tại: {extracted_img}")
 else:

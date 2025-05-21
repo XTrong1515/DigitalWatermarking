@@ -45,7 +45,7 @@ def check_image_requirements(image_folder, image_filename):
         print("Ảnh là RGB")
 
 # Ví dụ sử dụng
-input_folder = 'output_images'
-input_filename = 'watermarked.png'
+input_folder = 'input_images'
+input_filename = 'dac-diem-kien-truc-ai-cap-co-dai.jpg'  # Đường dẫn đến ảnh gốc
 
 check_image_requirements(input_folder, input_filename)
